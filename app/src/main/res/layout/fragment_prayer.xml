@@ -1,0 +1,203 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    tools:context=".MainActivity$PlaceholderFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+
+    <include layout="@layout/countdown"
+        android:layout_weight="3"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" />
+
+    <TableLayout
+        android:id="@+id/prayerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignEnd="@+id/jumahLayout"
+        android:layout_alignRight="@+id/jumahLayout"
+        android:layout_above="@+id/jumahLayout"
+        android:layout_weight="5">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider"
+            android:dividerPadding="12dip"
+            android:orientation="vertical"
+            android:showDividers="beginning|middle">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/prayerHeader"
+                    style="@style/heading"
+                    android:text="@string/prayerHeader" />
+
+                <TextView
+                    android:id="@+id/azaanHeader"
+                    style="@style/heading"
+
+                    android:text="@string/azaanHeader" />
+
+                <TextView
+                    android:id="@+id/iqamaHeader"
+                    style="@style/heading"
+                    android:text="@string/iqamaHeader" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/description"
+                    android:text="@string/Fajr"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fajrA"
+                    style="@style/description" />
+
+                <TextView
+                    android:id="@+id/fajrI"
+                    style="@style/description" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/description"
+                    android:text="@string/Zuhr"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/zuhrA"
+                    style="@style/description" />
+
+                <TextView
+                    android:id="@+id/zuhrI"
+                    style="@style/description" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/description"
+                    android:text="@string/Asar"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/asarA"
+                    style="@style/description" />
+
+                <TextView
+                    android:id="@+id/asarI"
+                    style="@style/description" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/description"
+                    android:text="@string/Meghrib"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/meghribA"
+                    style="@style/description" />
+
+                <TextView
+                    android:id="@+id/meghribI"
+                    style="@style/description" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/description"
+                    android:text="@string/Isha"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ishaA"
+                    style="@style/description" />
+
+                <TextView
+                    android:id="@+id/ishaI"
+                    style="@style/description" />
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/jumahLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="@drawable/divider"
+            android:dividerPadding="12dip"
+            android:showDividers="beginning"
+            android:layout_marginTop="@dimen/abc_action_bar_overflow_padding_start_material"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jumaahHeaderTV"
+                style="@style/heading"
+
+                android:text="Jumaah Prayer" />
+
+            <TextView
+                android:id="@+id/jummahPrayerTV1"
+                style="@style/description" />
+
+            <TextView
+                android:id="@+id/jummahPrayerTV2"
+                style="@style/description" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
+
+</FrameLayout>

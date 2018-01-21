@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:id="@+id/servicesRelativell"
+    android:background="@drawable/background_gradient"
+    tools:context=".m$PlaceholderFragment">
+
+    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_text_size_display_4_material"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/servicesScrollLayout"
+        android:layout_below="@+id/section_label">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/youthll"
+                android:text="@string/hello_world"
+                android:orientation="vertical" />
+
+
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/flServices">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Please connect to the Internet to access the latest youth events."
+            android:id="@+id/tvFrameYouthNoNet"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="50dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/abc_text_size_display_4_material"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/scrollView"
+            android:layout_below="@+id/section_label"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayoutOtherServices"
+                android:text="@string/hello_world"
+                android:orientation="vertical" />
+        </ScrollView>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="darkgray">#404040ff</drawable>
+    <drawable name="red">#ff00ff</drawable>
+    <drawable name="green">#0ff0ff</drawable>
+    <drawable name="lightgray">#c0c0c0ff</drawable>
+    <drawable name="white">#ffffffff</drawable>
+    <drawable name="blue">#00ffff</drawable>
+    <drawable name="gray">#808080ff</drawable>
+    <drawable name="skyblue">#00ccff</drawable>
+    <drawable name="turquoise">#ccffff</drawable>
+    <drawable name="teal">#008080</drawable>
+    <drawable name="aquamarine">#00FFFF</drawable>
+    <drawable name="azure">#F0FFFF</drawable>
+
+    <color name="transparent">#00000000</color>
+
+    <!-- card colors -->
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow_1">#d4d4d4</color>
+    <color name="card_shadow_2">#dddddd</color>
+    <color name="card_detailing">#eee</color>
+</resources>

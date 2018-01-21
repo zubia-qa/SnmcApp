@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#FFFFFF</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="heading">
+
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@drawable/white</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="description">
+
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <!--<item name="android:padding">1sp</item>-->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@drawable/white</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+</resources>

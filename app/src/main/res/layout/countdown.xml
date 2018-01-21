@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/llayout"
+    tools:showIn="@layout/fragment_prayer"
+    android:orientation="vertical"
+    android:divider="@drawable/divider"
+    android:dividerPadding="12dip"
+    android:showDividers="middle"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/datetv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Tues, 24 Jan 2018"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:baselineAligned="false"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1.8">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Time to \nnext Iqama"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <TextView
+                android:id="@+id/tvNextPrayerName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="at SNMC"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textHour"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:text="--" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/hour"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textMinutes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:text="--" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/minutes"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

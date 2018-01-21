@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Snmc</string>
+
+    <string name="title_section1">Prayers</string>
+    <string name="title_section2">Events</string>
+    <string name="title_section3">Donate</string>
+    <string name="title_section4">Youth</string>
+    <string name="title_section5">Services</string>
+    <string name="prayerHeader">Prayer</string>
+    <string name="azaanHeader">Azaan</string>
+    <string name="iqamaHeader">Iqama</string>
+    <string name="firstPrayer">First Prayer</string>
+    <string name="secondPrayer">Second Prayer</string>
+    <string name="Fajr">Fajr</string>
+    <string name="Zuhr">Zuhr</string>
+    <string name="Asar">Asar</string>
+    <string name="Meghrib">Meghrib</string>
+    <string name="Isha">Isha</string>
+    <string name="no_connection_message">Please connect to Internet to access this page.</string>
+
+    <string name="hello_world">Bismillah Irahman Iraheem</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="hour">Hours</string>
+</resources>
