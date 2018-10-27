@@ -1,3 +1,0 @@
-increment: db version(DbHelper), versionCode  versionName (app/build.gradle/app)
-signed apk: as...12
-apk in release folder within another one(confirm date is latest)
