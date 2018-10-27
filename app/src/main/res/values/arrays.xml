@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="polluted_waves">
+        <item>#394948</item>
+        <item>#5a7874</item>
+        <item>#499092</item>
+        <item>#43abae</item>
+        <item>#6ecfd2</item>
+    </string-array>
+
+    <string-array name="medical_express">
+        <item>#a3a3a3</item>
+        <item>#bbbbbb</item>
+        <item>#cccccc</item>
+        <item>#dddddd</item>
+        <item>#eeeeee</item>
+    </string-array>
+
+    <string-array name="vertical_ntb">
+        <item>#df5a55</item>
+        <item>#f9bb72</item>
+        <item>#76afcf</item>
+        <item>#dd6495</item>
+        <item>#72d3b4</item>
+        <item>#563d91</item>
+        <item>#56342e</item>
+        <item>#8c9f58</item>
+    </string-array>
+
+
+    <string-array name="facility">
+
+        <item>Facilities Booking</item>
+        <item>New Facility in Heart of Barrhaven. Looking for Hall for your events? Look no further than in your community. SNMC</item>
+        <item>http://www.snmc.ca/facilities-booking/</item>
+    </string-array>
+
+    <string-array name="marriage">
+        <item>SNMC Match Making Services</item>
+        <item>The mission of the SNMC Matchmaking Service is to provide a safe, friendly, and halal platform for single Muslims to find a potential spouse. SNMC Matchmaking offers the perfect setting and guidance for single Muslims and their families to meet and interact with others, within Islamic boundaries. The program aims to develop long-lasting marriages.</item>
+        <item>https://www.snmcmatchmaking.ca/home.aspx</item>
+    </string-array>
+
+    <string-array name="family">
+        <item>Family Counseling</item>
+        <item>Couple Counseling: In a situation where couples need advice from an Imam, the hours for counseling are on Wednesday and Thursday between 6:00 pm and 8:00 pm.
+\n
+Domestic Violence: SNMC will provide guidance from Islamic sources which very clearly indicate that any violence, including the domestic, is abhorred and condemned in Islam.
+\n
+Family Islamic Reconciliation: Whenever the conflict appears among the family members, the Imam will help by providing Islamic arbitration and reconciliation.</item>
+        <item>http://www.snmc.ca/family-counseling/</item>
+    </string-array>
+
+    <string-array name="youth">
+        <item>Youth Corner</item>
+        <item>SNMC Youth Weekly Events</item>
+        <item>http://www.snmc.ca/youth/</item>
+    </string-array>
+
+    <string-array name="senior">
+        <item>Seniors Event</item>
+        <item>
+Contact Person: Zeba Taj - zeba.ottawa@gmail.com
+\n\nSNMC Seniors Weekly Program: Weekly Yoga
+\nDay and Time: Every Wednesday from 11 am - 12 pm
+\nLocation: SNMC Basement D
+\n\nSNMC Seniors Monthly Program
+\nInstructors: Cindy (volunteer) for craft classes, trips in the summer, outings, Health talks from Ottawa Public Health, Imam Zijad
+\nSynopsis of Program: Seniors have 2 events each month, every 2nd and 4th Sundays with various activities pertaining to their Social, Educational and Spiritual enrichment.
+\nDay and Time:
+\n\n2nd Sunday (5:00 pm – 8:00 pm) – dinner, exercise, and a presentation on health
+\n\n4th Sunday (3:00 pm – 5:00 pm) – tea and snacks, and socialization
+\nLocation: SNMC Basement</item>
+        <item>http://www.snmc.ca/seniors-event/</item>
+    </string-array>
+
+    <string-array name="alhuda">
+        <item>SNMC Al-Huda School</item>
+        <item>Location @ Michaëlle-Jean Elementary School, 11 Claridge Dr (next to SNMC Masjid)
+\nTwo main components to our program:
+\n\n1.Language Program (Arabic)
+\nTime: 9:30 am – 12:00 pm
+\n\n2. Qur’an and Islamic Studies Program
+\nTime: 12:00 – 2:45pm
+\nCredit Course:
+We also offer a language Credit Course for high school students that will count toward their high school credits: 9:30 am – 1:00 pm
+\nArabic:
+Students learn the Arabic Alphabet, advance their communication skills and acquire different skills to understand and practice the Arabic language.
+\nIslamic Studies:
+Our program has a focus on mannerism, loving God and emulating the prophetic character.
+\n\nSchool Contacts:
+\nPrincipal, Nermin Nassar,  principal@snmc.ca
+\nSchool Admin,  Subaida Elmi, schooladmin@snmc.ca, 613-327-9164</item>
+        <item>http://www.snmc.ca/snmc-al-huda-school/</item>
+    </string-array>
+
+    <string-array name="sister">
+        <item>Sisters Programs</item>
+        <item>Sisters’ Halaqa
+            \n\nThis program is for the sisters, run by sisters and done by sisters.It is open to all and any women and girls who are interested in gaining knowledge about Islam.
+\n\nWhen: Sundays from 10:30 am to 12:30pm
+\nLocation: SNMC Musalla, 3131 Jockvale Road, Barrhaven
+\n1) 10:30am -11:15am: Tajweed and practice of recitation
+\n2) 11:15am to 12:30pm: Tafsir, presentations on varied topics, discussions and reflections.
+\n\nSisters Saturday Night Program – Mark the 4th Saturday 4 Your Sisters
+\n\nThe objective is to provide a forum for sisters to socialize, relax and enjoy each others company. At the same time, we increase in Islamic knowledge and practice; form and strengthen ties and promote sisterhood and community. We provide a platform for sisters to contribute their unique talents, knowledge and expertise to the masjid and community. We also have engaging activities such as nasheeds, poetry and Islamic quizzes.
+</item>
+        <item>http://www.snmc.ca/sisters-programs/</item>
+    </string-array>
+
+    <string-array name="funeral">
+        <item>Sickness and Funeral Services</item>
+        <item>An experienced Funeral Services team, along with dedicated on-site funeral facilities are used to assist families/individuals of deceased Muslims.
+\n\nPlease contact SNMC Funeral Services by calling 613-869-6259, and someone will be able to assist you.
+\n\nOther Muslim Cemeteries and Mosques with Funeral Services in Ottawa:
+\n-Ottawa Mosque (OMA)
+-Jami Omar Mosque
+-Masjid Bilal
+-Ottawa Muslim Cemetery</item>
+        <item>http://www.snmc.ca/sickness-and-funeral-services/</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>Second Language Program</item>
+        <item>SNMC in partnership with École des adultes Le Carrefour is pleased to announce French Classes.
+\nFor more information, email at info@snmc.ca. </item>
+        <item>http://www.snmc.ca/second-language-program-at-snmc/\n\nhttp://carrefour.cepeo.on.ca/wp-content/uploads/sites/2/2016/07/Depliant-FLS-Ott-2016-low-res.pdf</item>
+    </string-array>
+
+    <string-array name="convert">
+        <item>Islam 101 for New Muslims and Interested Canadians</item>
+        <item>Course ID: Islam 101 for  New Muslim  and Interested  Canadians
+Stopped until further notice.
+\n\nIt is replaced by Monthly 1st Sunday 12.45pm -1.45pm  brunch and social for new Muslims , any Muslim and any Canadian at  SNMC basement 3020 Woodroffe</item>
+        <item>http://www.snmc.ca/islam-101-for-new-muslims/</item>
+    </string-array>
+    <string-array name="scholarship">
+
+        <item>SNMC Scholarship</item>
+        <item>How to Apply
+Download and fill Application Form.
+Go through the checklist in the form.
+Submit – Email completed form to: info@snmc.ca</item>
+        <item>http://www.snmc.ca/snmc-scholarship/</item>
+
+    </string-array>
+</resources>

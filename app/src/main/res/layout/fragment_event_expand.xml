@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+    android:id="@+id/eventll"
+
+    android:background="@null" >
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarE"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+        <!--android:text="Please wait while the lists are being populated."-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:id="@+id/tvSProgressWait"-->
+        <!--android:gravity="center_vertical|center_horizontal"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_margin="50dp" />-->
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <TextView
+           android:id="@+id/tvSProgressWait"
+           android:background="@drawable/card"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/quicksand_light"
+           android:layout_gravity="top|center_vertical"
+           android:gravity="center_vertical|center_horizontal"
+           android:text="@string/connect_internet"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:textColor="@color/text_color" />
+       <ExpandableListView
+           android:id="@+id/lvExp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:divider="@null"
+           android:padding="10dp"
+
+           android:scrollbars="horizontal" />
+
+   </LinearLayout>
+</RelativeLayout>
