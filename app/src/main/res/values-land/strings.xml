@@ -2,4 +2,8 @@
 <resources>
     <string name="minutes">Minutes</string>
     <string name="hour">Hours</string>
+    <string name="_2018">2018</string>
+    <string name="time_to_nnext_iqama">Time to  next Iqama</string>
+    <string name="at_snmc">at SNMC</string>
+    <string name="jumaah_prayer">Jumaah Prayer</string>
 </resources>

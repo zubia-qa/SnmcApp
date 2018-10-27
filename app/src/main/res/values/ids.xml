@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="disclaimer" type="id">Disclaimer</item>
+    <item name="share" type="id">Share</item>
+</resources>

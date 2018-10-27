@@ -1,20 +1,43 @@
 <resources>
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:textColor">#FFFFFF</item>
-
-        <!-- Customize your theme here. -->
+        <!-- This is the styling for action bar -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
     </style>
+
+    <!--Change colour for action bar bg-->
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!--<item name="background">@drawable/aquamarine</item>-->
+        <item name="titleTextStyle">@style/MyActionBarTitle</item>
+    </style>
+    <!--Change colour for action bar Title text-->
+    <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@drawable/white</item>
+    </style>
+
+
+    <!-- Customize your theme here. Header used for toolbar -->
+    <style name="HeaderBar">
+        <item name="android:background">#605271</item>
+    </style>
+
+    <!-- Base application theme. Not using-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>
+    </style>
+
+
 
     <style name="heading">
 
+        <item name="android:fontFamily">@font/quicksand_bold</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">@drawable/white</item>
         <item name="android:layout_weight">1</item>
     </style>
@@ -23,10 +46,10 @@
 
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
-        <!--<item name="android:padding">1sp</item>-->
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:fontFamily">@font/quicksand_light</item>
+        <item name="android:textStyle">bold</item>        <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">13sp</item>
         <item name="android:textColor">@drawable/white</item>
         <item name="android:layout_weight">1</item>
     </style>

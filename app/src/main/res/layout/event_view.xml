@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/eventViewBox"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/eventViewBox"
     android:background="@drawable/card"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_add_calendar"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/titletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4.5"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/quicksand_bold"
+            android:padding="@dimen/abc_action_bar_overflow_padding_start_material"
+            android:text="@string/title"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnCal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight=".5"
             android:adjustViewBounds="true"
-        android:background="@null"
+            android:background="@null"
+            android:contentDescription="@string/add_to_calendar"
+            android:src="@drawable/ic_calendar" />
+            </LinearLayout>
 
-        android:id="@+id/btnCal"
-        android:layout_gravity="right" />
 
     <TextView
-        android:id="@+id/textview1"
+        android:id="@+id/descriptiontv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
-        android:padding="@dimen/abc_action_bar_overflow_padding_start_material"
-
+        android:fontFamily="@font/quicksand_light"
         android:textStyle="bold"
-        />
-
-    <TextView
-        android:id="@+id/textview2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:padding="@dimen/abc_action_bar_overflow_padding_start_material"
-
-        android:text="Description" />
+        android:text="@string/description" />
 
     <TextView
-        android:id="@+id/textview3"
+        android:id="@+id/linktv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Link"
         android:autoLink="web"
+        android:fontFamily="@font/quicksand_light"
+        android:textStyle="bold"
         android:padding="@dimen/abc_action_bar_overflow_padding_start_material"
+        android:text="@string/link" />
+    <!--<TextView-->
+    <!--android:id="@+id/textview4"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="@dimen/abc_action_bar_overflow_padding_start_material"-->
 
-        android:layout_weight="1"/>
-    <TextView
-        android:id="@+id/textview4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/abc_action_bar_overflow_padding_start_material"
-
-        android:text="Content"
-        android:layout_weight="1"/>
+    <!--android:text="Content"-->
+    <!--android:layout_weight="1"/>-->
 
 
 </LinearLayout>

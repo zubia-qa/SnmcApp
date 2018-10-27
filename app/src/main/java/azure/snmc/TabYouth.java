@@ -22,34 +22,30 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 
 public class TabYouth extends Fragment {
 
-    String address = "http://www.snmc.ca/youth/";
-    private TextView textView, textView2, textView3, textView4;
-    ViewGroup insertPoint;
-    LinearLayout child;
-    FrameLayout netEvent;
+    private final String address = "http://www.snmc.ca/youth/";
+    private ViewGroup insertPoint;
+    private FrameLayout netEvent;
     public TabYouth() {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-                return inflater.inflate(R.layout.fragment_youth, container, false);
+                return inflater.inflate(R.layout.fragment_event_expand, container, false);
     }
 
     public void onStart() {
         super.onStart();
-        insertPoint = (ViewGroup) getActivity().findViewById(R.id.flYouth);
 
-        netEvent = (FrameLayout) getActivity().findViewById(R.id.flYouth);
-        netEvent.setVisibility(View.INVISIBLE);
+//        netEvent = getActivity().findViewById(R.id.llayout);
+//        netEvent.setVisibility(View.INVISIBLE);
 
         ConnectivityManager cm = (ConnectivityManager) this.getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert cm != null;//may fix ni giving sometimes null
         NetworkInfo ni = cm.getActiveNetworkInfo();
         if (ni == null || (! ni.isConnected())){
             netEvent.setVisibility(View.VISIBLE);//Displays message of no internet
-            //Todo : if connect to internet should refresh
         }
         else
             new PostTask().execute();
@@ -80,9 +76,9 @@ public class TabYouth extends Fragment {
 //                     for (Element strong : element.select("strong")) {
 //                         description = strong.toString();
 //                         String myArray[] = {description};
-//                         arrayList.add(myArray);//fixme null pointer reference
+//                         arrayList.add(myArray);
 
-                for (Element element : doc1.select(".block_content")) {//// TODO: 2018-01-11 not for only one block content
+                for (Element element : doc1.select(".block_content")) {
                     for (Element hTags : element.select("h3")) {
                                 Elements h3Tags = hTags.select("strong");
                                 description =  h3Tags.text();
@@ -92,10 +88,8 @@ public class TabYouth extends Fragment {
                      }}
             } catch (Exception e) {
 
-                String result = "Sorry, something went wrong. Please, send feedback";
-                return result;
             }
-            return null;//?// TODO: 2018-01-11
+            return null;
         }
 
         @Override
@@ -107,9 +101,9 @@ public class TabYouth extends Fragment {
                 for (int i = 0; i < arrayList.size(); i++) {
 
                     LayoutInflater vi = getActivity().getLayoutInflater();//todo null object - layoutinflater when rotated quickly
-                    child = (LinearLayout) vi.inflate(R.layout.event_view, null);
+                    LinearLayout child = (LinearLayout) vi.inflate(R.layout.event_view, null);
 
-                    textView = (TextView) child.findViewById(R.id.textview1);
+                    TextView textView = child.findViewById(R.id.titletv);
 
 //                  addLayout(title, description, link, content);
                     String[] strArray = (String[])arrayList.get(i);

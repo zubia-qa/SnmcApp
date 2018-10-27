@@ -13,11 +13,22 @@
     <drawable name="aquamarine">#00FFFF</drawable>
     <drawable name="azure">#F0FFFF</drawable>
 
-    <color name="transparent">#00000000</color>
+    <color name="transparent">#00fbf9f9</color>
 
     <!-- card colors -->
-    <color name="card_background">#ffffff</color>
+    <color name="card_background">#f4f6f7</color>
     <color name="card_shadow_1">#d4d4d4</color>
-    <color name="card_shadow_2">#dddddd</color>
+    <color name="card_shadow_2">#c8c8c8</color>
     <color name="card_detailing">#eee</color>
+
+    <color name="colorPrimary">#22b4b7</color>
+    <color name="colorPrimaryDark">#1a8a8c</color>
+    <color name="colorAccent">#1e8ca8</color>
+    <color name="textColorPrimary">#ffffff</color>
+    <!--<color name="colorPrimary">@android:color/white</color>-->
+    <!--<color name="colorAccent">@android:color/white</color>-->
+    <!--<color name="colorPrimaryDark">@android:color/white</color>-->
+    <color name="text_color">#222222</color>
+    <color name="transparent1">#73fbf9f9</color>
+
 </resources>

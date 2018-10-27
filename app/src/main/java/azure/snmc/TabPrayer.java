@@ -2,50 +2,34 @@ package azure.snmc;
 
 //import android.app.Fragment;
 
-import android.database.Cursor;
 import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ProgressBar;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
-
-import static java.lang.Boolean.TRUE;
+import java.util.Locale;
 
 public class TabPrayer extends Fragment {
 
-    private TextView fajrAtv, fajrItv, zuhrItv, asarItv, meghribItv, ishaItv, zuhrAtv, asarAtv, meghribAtv, ishaAtv, datetv, azaantv,prayertextJumamah1,prayertextJumamah2;
-    private String currentDate;
-    Date EndTime,CurrentTime = null;
+    private Date EndTime;
+    private Date CurrentTime = null;
 
-    private TextView txtHour, txtMinute,txtNextName;
+    private TextView txtHour;
+    private TextView txtMinute;
     private Handler handler;
-    private Runnable runnable;
-    List<String> array, arrayIqama;
+    private List<String> array;
     private SimpleDateFormat timeFormat;
 
     public TabPrayer() {
@@ -72,31 +56,31 @@ public class TabPrayer extends Fragment {
 
     public void onStart() {
         super.onStart();
-        SimpleDateFormat curFormater = new SimpleDateFormat("EEEE MMM dd, yyyy");
-        currentDate = curFormater.format(new Date());
+        SimpleDateFormat curFormater = new SimpleDateFormat("EEEE MMM dd, yyyy",Locale.CANADA);
+        String currentDate = curFormater.format(new Date());
+         TextView fajrAtv, fajrItv, zuhrItv, asarItv, meghribItv, ishaItv, zuhrAtv, asarAtv, meghribAtv, ishaAtv, datetv,prayertextJumamah1,prayertextJumamah2;
 
-        datetv = (TextView) getActivity().findViewById(R.id.datetv);
-        fajrAtv = (TextView) getActivity().findViewById(R.id.fajrA);
-        fajrItv = (TextView) getActivity().findViewById(R.id.fajrI);
-        zuhrAtv = (TextView) getActivity().findViewById(R.id.zuhrA);
-        zuhrItv = (TextView) getActivity().findViewById(R.id.zuhrI);
-        asarAtv = (TextView) getActivity().findViewById(R.id.asarA);
-        asarItv = (TextView) getActivity().findViewById(R.id.asarI);
-        meghribAtv = (TextView) getActivity().findViewById(R.id.meghribA);
-        meghribItv = (TextView) getActivity().findViewById(R.id.meghribI);
-        ishaItv = (TextView) getActivity().findViewById(R.id.ishaI);
-        ishaAtv = (TextView) getActivity().findViewById(R.id.ishaA);
-        azaantv = (TextView) getActivity().findViewById(R.id.azaanHeader);
-        prayertextJumamah1 = (TextView) getActivity().findViewById(R.id.jummahPrayerTV1);
-        prayertextJumamah2 = (TextView) getActivity().findViewById(R.id.jummahPrayerTV2);
+        datetv =  getActivity().findViewById(R.id.datetv);
+        fajrAtv = getActivity().findViewById(R.id.fajrA);
+        fajrItv = getActivity().findViewById(R.id.fajrI);
+        zuhrAtv =  getActivity().findViewById(R.id.zuhrA);
+        zuhrItv = getActivity().findViewById(R.id.zuhrI);
+        asarAtv = getActivity().findViewById(R.id.asarA);
+        asarItv = getActivity().findViewById(R.id.asarI);
+        meghribAtv = getActivity().findViewById(R.id.meghribA);
+        meghribItv = getActivity().findViewById(R.id.meghribI);
+        ishaItv = getActivity().findViewById(R.id.ishaI);
+        ishaAtv = getActivity().findViewById(R.id.ishaA);
+        prayertextJumamah1 =  getActivity().findViewById(R.id.jummahPrayerTV1);
+        prayertextJumamah2 =  getActivity().findViewById(R.id.jummahPrayerTV2);
         prayertextJumamah1.setTextColor(Color.WHITE);
         prayertextJumamah2.setTextColor(Color.WHITE);
 
-        txtHour = (TextView) getActivity().findViewById(R.id.textHour);
-        txtMinute = (TextView) getActivity().findViewById(R.id.textMinutes);
-        txtNextName = (TextView) getActivity().findViewById(R.id.tvNextPrayerName);
+        txtHour =  getActivity().findViewById(R.id.textHour);
+        txtMinute =  getActivity().findViewById(R.id.textMinutes);
+        TextView txtNextName = getActivity().findViewById(R.id.tvNextPrayerName);
 
-        timeFormat = new SimpleDateFormat("h:mm a");
+        timeFormat = new SimpleDateFormat("hh:mm a",Locale.CANADA);
 
         DbHelper myDbHelper = new DbHelper(getActivity().getApplicationContext());
 
@@ -106,11 +90,7 @@ public class TabPrayer extends Fragment {
             throw new Error("Unable to create database");
         }
 
-        try {
-            myDbHelper.openDataBase();
-        } catch (SQLException sqle) {
-            throw sqle;
-        }
+        myDbHelper.openDataBase();
 
 
         array = myDbHelper.getAllPrayersList();//        Toast.makeText(getActivity(), "array=" + array, Toast.LENGTH_SHORT).show(); //help for debugging
@@ -131,20 +111,17 @@ public class TabPrayer extends Fragment {
             prayertextJumamah2.setText("2nd Prayer: " + array.get(12));
 //            jumaahSubstring = "WINTER: 1st-12:00 PM   2nd-1:15PM \n SUMMER: 1st-1:00PM   2nd-2:15PM";
 
-        } else {//if database didn't fetch an array will try in posttask
-            azaantv.setVisibility(View.INVISIBLE);//masking column heading as online no data for azaan todo: dont need this
+        } else {// todo
         }
-
            nextPrayerTime();
-
     }
 
 
     private void nextPrayerTime() {
         boolean nextDay = false;
-        arrayIqama = new ArrayList<>();//iqama times list for that day
-        arrayIqama.add("12:00 AM");//todo hack way of finding time after next day starts
-        arrayIqama.add(array.get(2));//Fajr
+        List<String> arrayIqama = new ArrayList<>();
+        arrayIqama.add("12:00 AM");//hack way of finding time after next day starts
+        arrayIqama.add(array.get(2));//Fajr //TODO out of bound exception
         arrayIqama.add(array.get(4));//zuhr
         arrayIqama.add(array.get(6));//Asr
         arrayIqama.add(array.get(8));//Meghrib
@@ -152,24 +129,24 @@ public class TabPrayer extends Fragment {
         arrayIqama.add(array.get(2));//todo hack way of finding time in between isha and next fajr
 
         try {
-            Date StartTime = null;
+            Date StartTime;
             CurrentTime = timeFormat.parse(timeFormat.format(new Date()));
 
             for (int i = 0; i < arrayIqama.size()-1; i++) {
 
-                StartTime = timeFormat.parse(arrayIqama.get(i).toString());
-                EndTime = timeFormat.parse(arrayIqama.get(i+1).toString());
-                if(nextDay) {//If next day times then add day
+                StartTime = timeFormat.parse(arrayIqama.get(i));//fixme not able to parse the time hh:mm a
+                EndTime = timeFormat.parse(arrayIqama.get(i + 1));
+                if(nextDay) {//If next day (fajr) times then add day
                     StartTime = AddDays(StartTime,1);
                     EndTime = AddDays(EndTime,1);
                 }
-                else if(EndTime.before(StartTime)) {//If end before start then end next day
+                else if(EndTime.before(StartTime)) {//If end time before start (fajr) then end next day
                     nextDay = true;
                     EndTime = AddDays(EndTime,1);
                 }
 
                 if (CurrentTime.after(StartTime) && CurrentTime.before(EndTime)) {
-    //              todo find prayer name i0=Fajr, i1=Zuhr...etc
+    //              find prayer name i0=Fajr, i1=Zuhr...etc
                     countDownStart();
                 break;
                }
@@ -187,35 +164,33 @@ public class TabPrayer extends Fragment {
     }
 
 
-    public void countDownStart() {
+    private void countDownStart() {
             handler = new Handler();
-            runnable = new Runnable() {
+        Runnable runnable = new Runnable() {
 
-                @Override
-                public void run() {
-                    handler.postDelayed(this, 1000);
-                    try {
-
+            @Override
+            public void run() {
+                handler.postDelayed(this, 1000);
+                try {
 //                      if (!CurrentTime.after(EndTime)) {//fixme-not working with this condition
-                        CurrentTime = timeFormat.parse(timeFormat.format(new Date()));
-                        long diff = EndTime.getTime()-CurrentTime.getTime();
-//                        if(diff<=0){}
-//                        else {
-                            long hours = diff / (60 * 60 * 1000);
-                            diff -= hours * (60 * 60 * 1000);
-                            long minutes = diff / (60 * 1000);
-                            txtHour.setText("" + String.format("%02d", hours));
-                            txtMinute.setText("" + String.format("%02d", minutes));
+                    CurrentTime = timeFormat.parse(timeFormat.format(new Date()));
+                    long diff = EndTime.getTime() - CurrentTime.getTime();
+//                        if(diff<=0){}//todo to start  again when hits zero
+                    long hours = diff / (60 * 60 * 1000);
+                    diff -= hours * (60 * 60 * 1000);
+                    long minutes = diff / (60 * 1000);
+                    txtHour.setText("" + String.format("%02d", hours));
+                    txtMinute.setText("" + String.format("%02d", minutes));
 //                        }
 //                        } else {//// FIXME: 2018-01-16  not needed, something else maybe, also need to stop any leak if any
 //                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }//todo resume run countdown+ when time is 0 at fajr dont display 24
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }//todo resume run countdown+ when time is 0 at fajr dont display 24
 
-            };
-            handler.postDelayed(runnable, 1 * 1000);
+        };
+            handler.postDelayed(runnable, 1000);
         }
 
 }

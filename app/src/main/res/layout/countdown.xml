@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
+
         android:id="@+id/llayout"
     tools:showIn="@layout/fragment_prayer"
     android:orientation="vertical"
@@ -20,8 +19,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="@font/quicksand_light"
         android:gravity="center"
-        android:text="Tues, 24 Jan 2018"
+        android:text="@string/_2018"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#fff"
         android:textStyle="bold" />
@@ -46,19 +46,23 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_weight="3.25"
                 android:gravity="center"
-                android:text="Time to \nnext Iqama"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+                android:text="@string/time_to_nnext_iqama"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvNextPrayerName"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="at SNMC"
+                android:fontFamily="@font/quicksand_light"
+                android:layout_weight=".75"
+                android:text="@string/at_snmc"
                 android:gravity="center_horizontal"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#fff"
@@ -79,6 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:gravity="center"
+                android:fontFamily="@font/quicksand_bold"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffff"
                 android:textSize="35sp"
@@ -90,6 +95,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/quicksand_light"
                 android:gravity="center_horizontal"
                 android:text="@string/hour"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -108,6 +114,7 @@
             <TextView
                 android:id="@+id/textMinutes"
                 android:layout_width="fill_parent"
+                android:fontFamily="@font/quicksand_bold"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:gravity="center"
@@ -122,6 +129,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/quicksand_light"
                 android:gravity="center_horizontal"
                 android:text="@string/minutes"
                 android:textAppearance="?android:attr/textAppearanceSmall"
